@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arshavin</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #fff;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(0,0,0,0.3);
+            width: 350px;
+            backdrop-filter: blur(10px);
+        }
+
+        h1 {
+            font-size: 2rem;
+            color: #00d9ff;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
+
+        .form-box button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 10px;
+            background: #00d9ff;
+            color: #fff;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .form-box button:hover {
+            background: #007b9e;
+            transform: scale(1.05);
+        }
+
+        footer {
+            margin-top: 25px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Arshavin</h1>
+        <p>Select a section below:</p>
+
+        <div class="form-box">
+            <button onclick="redirect('anime')">🎌 Anime</button>
+            <button onclick="redirect('movies')">🎬 Movies</button>
+            <button onclick="redirect('youtube')">▶️ YouTube</button>
+            <button onclick="redirect('tiktok')">🎵 TikTok</button>
+            <button onclick="redirect('instagram')">📸 Instagram</button>
+            <button onclick="redirect('facebook')">📘 Facebook</button>
+        </div>
+
+        <footer>Created by Arshavin 🩶</footer>
+    </div>
+
+    <script>
+        function redirect(section) {
+            const links = {
+                anime: 'https://9animetv.to/home',
+                movies: 'https://cineb.gg/',
+                youtube: 'https://www.youtube.com/',
+                tiktok: 'https://www.tiktok.com/',
+                instagram: 'https://www.instagram.com/',
+                facebook: 'https://www.facebook.com/'
+            };
+            window.location.href = links[section];
+        }
+    </script>
+</body>
+</html>
